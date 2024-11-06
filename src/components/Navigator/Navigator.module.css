@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #55394b91;
+  color: #f7aaa0;
+}
+
+.links {
+  display: flex;
+  gap: 50px;
+}
+
+.link {
+  font-size: 20px;
+  text-shadow: 2px 3px 4px #bc7880;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: 20px;
+  text-shadow: 2px 3px 4px #bc7880;
+}
+
+.link:hover {
+  color: #bc7880;
+}
+
+.link:active {
+  color: #bc7880;
+}

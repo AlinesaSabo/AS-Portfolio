@@ -1,3 +1,15 @@
+/* Для основного текста */
+body {
+  font-family: "Merienda", sans-serif;
+}
+
+/* Для заголовков */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

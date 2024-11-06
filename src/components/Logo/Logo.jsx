@@ -1,4 +1,6 @@
-<svg
+const Logo = () => {
+  return (
+    <svg
       version="1.1"
       viewBox="0 0 2000 2000"
       width="60"
@@ -21,3 +23,7 @@
         fill="#F7ACA0"
       />
     </svg>
+  );
+};
+
+export default Logo;

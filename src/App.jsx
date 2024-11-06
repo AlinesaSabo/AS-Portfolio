@@ -1,7 +1,20 @@
-import Header from "./components/Header/Header";
+import Particles from "@tsparticles/react";
+import Navigator from "./components/Navigator/Navigator";
+import "./App.css";
+import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
+import Projects from "./components/Projects/Projects";
 
 function App() {
-  return <Header />;
+  return (
+    <div>
+      <Particles id="particles" />
+      <Navigator />
+      <About />
+      <Skills />
+      <Projects />
+    </div>
+  );
 }
 
 export default App;
