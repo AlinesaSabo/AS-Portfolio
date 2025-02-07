@@ -1,0 +1,75 @@
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.textSection {
+  flex: 1;
+  color: #f0f0f0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #bc7880;
+}
+
+.highlight {
+  color: #f7aaa0;
+}
+
+.uiux {
+  color: #825261;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #d1d5db;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hireMe,
+.seeProjects {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.seeProjects {
+  background-color: #f7aaa0;
+  color: rgb(37, 37, 37);
+}
+
+.seeProjects:hover {
+  background-color: #55394b;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
+}

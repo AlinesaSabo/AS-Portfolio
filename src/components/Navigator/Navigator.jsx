@@ -3,20 +3,27 @@ import s from "./Navigator.module.css";
 import Logo from "../Logo/Logo";
 
 const Navigator = () => {
+  const navLinks = [
+    { path: "/about-me", label: "About me" },
+    { path: "/skills", label: "Skills" },
+    { path: "/projects", label: "Projects" },
+  ];
+
   return (
     <div className={s.wrapper}>
       <Logo className={s.logo} />
-      <p className={s.name}>Alina Sabo</p>
       <div className={s.links}>
-        <NavLink className={s.link} to="about-me">
-          About me
-        </NavLink>
-        <NavLink className={s.link} to="skills">
-          Skills
-        </NavLink>
-        <NavLink className={s.link} to="projects">
-          Projects
-        </NavLink>
+        {navLinks.map((link, index) => (
+          <NavLink
+            key={index}
+            className={({ isActive }) =>
+              isActive ? `${s.link} ${s.active}` : s.link
+            }
+            to={link.path}
+          >
+            {link.label}
+          </NavLink>
+        ))}
       </div>
     </div>
   );
