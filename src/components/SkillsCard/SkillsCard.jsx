@@ -4,6 +4,7 @@ import react from "../../assets/img/react.png";
 import node from "../../assets/img/node.png";
 import js from "../../assets/img/js.png";
 import css from "../../assets/img/css.png";
+import StarBorder from "../StarBorder/StarBorder";
 
 const SkillsCard = () => {
   const skills = [
@@ -16,16 +17,21 @@ const SkillsCard = () => {
 
   return (
     <div className={s.skillsContainer}>
-      <div className={s.title}>
-        <p>Technology stack 🔥</p>
-      </div>
+      <h3 className={s.title}>Technology stack</h3>
       <div className={s.imageWrapper}>
         <ul className={s.imageList}>
           {skills.map((skill, index) => (
             <li key={index} className={s.imageItem}>
-              <div className={s.imageCircle}>
-                <img src={skill.img} alt={skill.alt} />
-              </div>
+              <StarBorder
+                as="button"
+                className="custom-class"
+                color="#f7aaa0"
+                speed="2s"
+              >
+                <div className={s.imageCircle}>
+                  <img src={skill.img} alt={skill.alt} />
+                </div>
+              </StarBorder>
             </li>
           ))}
         </ul>

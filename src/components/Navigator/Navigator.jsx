@@ -1,12 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import s from "./Navigator.module.css";
 import Logo from "../Logo/Logo";
 
 const Navigator = () => {
   const navLinks = [
-    { path: "/about-me", label: "About me" },
-    { path: "/skills", label: "Skills" },
-    { path: "/projects", label: "Projects" },
+    { path: "about", label: "About me" },
+    { path: "skills", label: "Skills" },
+    { path: "projects", label: "Projects" },
   ];
 
   return (
@@ -14,15 +14,16 @@ const Navigator = () => {
       <Logo className={s.logo} />
       <div className={s.links}>
         {navLinks.map((link, index) => (
-          <NavLink
+          <Link
             key={index}
-            className={({ isActive }) =>
-              isActive ? `${s.link} ${s.active}` : s.link
-            }
             to={link.path}
+            smooth={true}
+            duration={500}
+            className={s.link}
+            activeClass={s.active}
           >
             {link.label}
-          </NavLink>
+          </Link>
         ))}
       </div>
     </div>

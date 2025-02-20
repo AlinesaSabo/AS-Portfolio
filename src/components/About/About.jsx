@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import s from "./About.module.css";
-import foto from "../../assets/img/foto.webp"; // Убедитесь, что путь к изображению правильный
+import foto from "../../assets/img/foto.webp";
+import GradientText from "../GradientText/GradientText";
 
 const About = () => {
   return (
@@ -13,8 +15,15 @@ const About = () => {
     >
       <div className={s.textSection}>
         <h1 className={s.title}>
-          Hi, I'm <span className={s.highlight}>Alina</span>, a <br />
-          <span className={s.uiux}>Front-End Developer</span>.
+          <GradientText
+            colors={["#f7aaa0", "#55394b", "#f7aaa0", "#55394b"]}
+            animationSpeed={5}
+            showBorder={false}
+            className="custom-class"
+          >
+            Hi, I'm Alina, a <br />
+            Front-End Developer.
+          </GradientText>
         </h1>
         <p className={s.description}>
           A passionate and motivated Developer. My expertise lies in building
@@ -35,8 +44,21 @@ const About = () => {
           digital solutions.
         </p>
         <div className={s.buttons}>
-          <Link to="/projects" className={s.seeProjects}>
+          <Link
+            to="projects"
+            className={s.seeProjects}
+            smooth={true}
+            duration={500}
+          >
             See My Projects
+          </Link>
+          <Link
+            to="contscts"
+            className={s.seeProjects}
+            smooth={true}
+            duration={500}
+          >
+            Contscts
           </Link>
         </div>
       </div>

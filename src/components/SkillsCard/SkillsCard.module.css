@@ -1,12 +1,14 @@
 .skillsContainer {
   text-align: center;
   padding: 20px;
+  margin: 100px auto;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  color: #d1d5db;
 }
 
 .imageWrapper {
@@ -25,17 +27,6 @@
 
 .imageItem {
   text-align: center;
-}
-
-.imageCircle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #2a2a2a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .skillImage {

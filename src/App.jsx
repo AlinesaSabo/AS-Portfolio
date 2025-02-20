@@ -1,12 +1,13 @@
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
-import "./App.css";
-import { AnimatePresence, motion } from "framer-motion";
+/* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 import Navigator from "./components/Navigator/Navigator";
-import About from "./pages/AboutMe/AboutMe";
-import Skills from "./pages/Skills/Skills";
-import Projects from "./pages/Projects/Projects";
-import NotFound from "./pages/NotFoud/NotFound";
-import ParticlesComponent from "./components/ParticlesBackground/ParticlesBackground"; // Подключаем компонент частиц
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import "./App.css";
+import SkillsCard from "./components/SkillsCard/SkillsCard";
+import Contact from "./components/Contsct/Contact";
+import Waves from "./components/Waves/Waves";
+import Footer from "./components/Footer/Footer";
 
 const PageTransition = ({ children }) => {
   return (
@@ -22,48 +23,45 @@ const PageTransition = ({ children }) => {
 };
 
 function App() {
-  const location = useLocation();
-
   return (
     <div className="App">
       <Navigator />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Navigate to="/about-me" />} />
-          <Route
-            path="/about-me"
-            element={
-              <PageTransition>
-                <About />
-              </PageTransition>
-            }
-          />
-          <Route
-            path="/skills"
-            element={
-              <PageTransition>
-                <Skills />
-              </PageTransition>
-            }
-          />
-          <Route
-            path="/projects"
-            element={
-              <PageTransition>
-                <Projects />
-              </PageTransition>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <PageTransition>
-                <NotFound />
-              </PageTransition>
-            }
-          />
-        </Routes>
-      </AnimatePresence>
+      <div className="waves-background">
+        <Waves
+          lineColor="#2a2a2a"
+          backgroundColor="#3a2d3d"
+          waveSpeedX={0.03}
+          waveSpeedY={0.06}
+          waveAmpX={40}
+          waveAmpY={20}
+          friction={0.9}
+          tension={0.05}
+          maxCursorMove={120}
+          xGap={12}
+          yGap={36}
+        />
+      </div>
+      <PageTransition>
+        <div id="about" className="section">
+          <About />
+        </div>
+      </PageTransition>
+      <PageTransition>
+        <div id="skills" className="section">
+          <SkillsCard />
+        </div>
+      </PageTransition>
+      <PageTransition>
+        <div id="projects" className="section">
+          <Projects />
+        </div>
+      </PageTransition>
+      <PageTransition>
+        <div id="contscts" className="section">
+          <Contact />
+        </div>
+      </PageTransition>
+      <Footer />
     </div>
   );
 }

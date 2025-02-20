@@ -1,0 +1,45 @@
+.contactContainer {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #f7aaa0;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #d1d5db;
+}
+
+.text {
+  color: #d1d5db;
+  text-align: center;
+  max-width: 700px;
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #f7aaa0;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.socialIcon {
+  font-size: 2rem;
+  color: #f7aaa0;
+  transition: color 0.3s;
+}
+
+.socialIcon:hover {
+  color: #55394b;
+  transform: scale(1.1);
+}

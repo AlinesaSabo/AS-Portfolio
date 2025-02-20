@@ -1,0 +1,16 @@
+/* Footer.module.css */
+.footer {
+  background-color: #2a2a2a;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.footerText {
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}

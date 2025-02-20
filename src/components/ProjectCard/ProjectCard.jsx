@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/* eslint-disable react/prop-types */
 import s from "./ProjectCard.module.css";
 
 const ProjectCard = ({ project }) => {

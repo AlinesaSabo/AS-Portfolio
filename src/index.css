@@ -1,9 +1,7 @@
-/* Для основного текста */
 body {
   font-family: "Merienda", sans-serif;
 }
 
-/* Для заголовков */
 h1,
 h2,
 h3 {
@@ -13,3 +11,19 @@ h3 {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Занимает всю высоту экрана */
+}
+
+.waves-background {
+  position: fixed; /* Делаем фиксированным, чтобы оставался на фоне */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Занимает всю высоту экрана */
+  z-index: -2; /* Оставляем его на заднем плане */
+  pointer-events: none; /* Чтобы не мешал интеракции с другими элементами */
+}
