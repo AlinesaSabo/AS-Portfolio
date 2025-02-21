@@ -1,8 +1,8 @@
 .projectsContainer {
   text-align: center;
-  padding: 40px 20px;
+  padding: 0px 20px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 50px auto;
   position: relative;
 }
 
@@ -10,7 +10,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #f7aaa0;
+  color: #d1d5db;
 }
 
 .sliderWrapper {

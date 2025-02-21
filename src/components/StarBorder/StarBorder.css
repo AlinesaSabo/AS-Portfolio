@@ -4,6 +4,7 @@
   position: relative;
   border-radius: 33px;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .border-gradient-bottom {

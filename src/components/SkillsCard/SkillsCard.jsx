@@ -1,6 +1,6 @@
 import s from "./SkillsCard.module.css";
 import StarBorder from "../StarBorder/StarBorder";
-import { skillsIcons } from "../Icons/skillsIcons";
+import { skills } from "../../data/skillsData";
 
 const SkillsCard = () => {
   return (
@@ -8,7 +8,7 @@ const SkillsCard = () => {
       <h3 className={s.title}>Technology stack</h3>
       <div className={s.imageWrapper}>
         <ul className={s.imageList}>
-          {skillsIcons.map((skill, index) => (
+          {skills.map((skill, index) => (
             <li key={index} className={s.imageItem}>
               <StarBorder
                 as="button"
@@ -16,9 +16,7 @@ const SkillsCard = () => {
                 color="#f7aaa0"
                 speed="2s"
               >
-                <div className={s.imageCircle}>
-                  <img src={skill.img} alt={skill.alt} />
-                </div>
+                <div className={s.imageCircle}>{skill.svg}</div>
               </StarBorder>
             </li>
           ))}
