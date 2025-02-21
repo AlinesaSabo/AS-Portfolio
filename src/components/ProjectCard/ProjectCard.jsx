@@ -1,10 +1,24 @@
 /* eslint-disable react/prop-types */
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import s from "./ProjectCard.module.css";
 
 const ProjectCard = ({ project }) => {
   return (
     <div className={s.projectCard}>
-      <img src={project.image} alt={project.title} />
+      <div
+        className={s.imageWrapper}
+        onClick={() => window.open(project.liveDemo, "_blank")}
+      >
+        <img
+          src={project.image}
+          alt={project.title}
+          className={s.projectImage}
+        />
+        <div className={s.hoverOverlay}>
+          Live Demo <HiOutlineArrowNarrowRight />
+        </div>
+      </div>
+
       <h3 className={s.projectTitle}>{project.title}</h3>
       <p className={s.projectDescription}>{project.description}</p>
 
@@ -14,25 +28,6 @@ const ProjectCard = ({ project }) => {
             {skill}
           </span>
         ))}
-      </div>
-
-      <div className={s.buttons}>
-        <a
-          href={project.liveDemo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={s.button}
-        >
-          Live Demo
-        </a>
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={s.button}
-        >
-          GitHub
-        </a>
       </div>
     </div>
   );
