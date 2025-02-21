@@ -5,7 +5,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import "./App.css";
 import SkillsCard from "./components/SkillsCard/SkillsCard";
-import Contact from "./components/Contsct/Contact";
+import Contact from "./components/Contact/Contact";
 import Waves from "./components/Waves/Waves";
 import Footer from "./components/Footer/Footer";
 
@@ -57,7 +57,7 @@ function App() {
         </div>
       </PageTransition>
       <PageTransition>
-        <div id="contscts" className="section">
+        <div id="contacts" className="section">
           <Contact />
         </div>
       </PageTransition>

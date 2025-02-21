@@ -1,6 +1,5 @@
 import s from "./Contact.module.css";
 import {
-  FaTwitter,
   FaGithub,
   FaLinkedin,
   FaInstagram,

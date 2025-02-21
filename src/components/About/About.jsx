@@ -53,12 +53,12 @@ const About = () => {
             See My Projects
           </Link>
           <Link
-            to="contscts"
+            to="contacts"
             className={s.seeProjects}
             smooth={true}
             duration={500}
           >
-            Contscts
+            Contacts
           </Link>
         </div>
       </div>
