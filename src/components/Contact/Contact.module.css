@@ -43,3 +43,9 @@
   color: #55394b;
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}

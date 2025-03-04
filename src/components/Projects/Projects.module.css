@@ -56,11 +56,3 @@
 .nextButton {
   right: -60px;
 }
-
-.swiper-pagination-bullet {
-  background: #f7aaa0;
-}
-
-.swiper-pagination-bullet-active {
-  background: #ff4d6d;
-}
